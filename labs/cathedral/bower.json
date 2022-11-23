@@ -1,0 +1,23 @@
+{
+  "name": "cathedral",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    ""
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/js/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "three.js": "~0.73.0",
+    "angular": "~1.4.8"
+  }
+}

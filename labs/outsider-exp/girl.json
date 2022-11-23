@@ -1,0 +1,95 @@
+{"frames": {
+
+"05-P03-Fille-01.png":
+{
+	"frame": {"x":184,"y":1256,"w":181,"h":303},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":107,"w":181,"h":303},
+	"sourceSize": {"w":432,"h":432}
+},
+"05-P03-Fille-02.png":
+{
+	"frame": {"x":183,"y":1,"w":182,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":81,"y":108,"w":182,"h":302},
+	"sourceSize": {"w":432,"h":432}
+},
+"05-P03-Fille-03.png":
+{
+	"frame": {"x":1,"y":999,"w":181,"h":304},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":106,"w":181,"h":304},
+	"sourceSize": {"w":432,"h":432}
+},
+"05-P03-Fille-04.png":
+{
+	"frame": {"x":184,"y":949,"w":181,"h":305},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":105,"w":181,"h":305},
+	"sourceSize": {"w":432,"h":432}
+},
+"05-P03-Fille-05.png":
+{
+	"frame": {"x":184,"y":641,"w":181,"h":306},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":104,"w":181,"h":306},
+	"sourceSize": {"w":432,"h":432}
+},
+"05-P03-Fille-06.png":
+{
+	"frame": {"x":1,"y":1305,"w":180,"h":320},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":83,"y":90,"w":180,"h":320},
+	"sourceSize": {"w":432,"h":432}
+},
+"05-P03-Fille-07.png":
+{
+	"frame": {"x":1,"y":672,"w":181,"h":325},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":83,"y":85,"w":181,"h":325},
+	"sourceSize": {"w":432,"h":432}
+},
+"05-P03-Fille-08.png":
+{
+	"frame": {"x":1,"y":1,"w":180,"h":334},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":84,"y":76,"w":180,"h":334},
+	"sourceSize": {"w":432,"h":432}
+},
+"05-P03-Fille-09.png":
+{
+	"frame": {"x":1,"y":337,"w":180,"h":333},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":85,"y":77,"w":180,"h":333},
+	"sourceSize": {"w":432,"h":432}
+},
+"05-P03-Fille-10.png":
+{
+	"frame": {"x":183,"y":305,"w":179,"h":334},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":86,"y":76,"w":179,"h":334},
+	"sourceSize": {"w":432,"h":432}
+}},
+"animations": {
+	"girl": ["05-P03-Fille-01.png","05-P03-Fille-02.png","05-P03-Fille-03.png","05-P03-Fille-04.png","05-P03-Fille-05.png","05-P03-Fille-06.png","05-P03-Fille-07.png","05-P03-Fille-08.png","05-P03-Fille-09.png","05-P03-Fille-10.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "girl.png",
+	"format": "RGBA8888",
+	"size": {"w":366,"h":1626},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:3a9cc155e20a9d5bf9031efa5ea40bbc:ebdbccffbf6245eef53a8f9963727f6c:165fda0d1be138e47f78fe530c9a9f92$"
+}
+}

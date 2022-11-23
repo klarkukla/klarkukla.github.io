@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cathedral</title>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/gui.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+</head>
+<body>
+
+    <!-- LOADER -->
+
+    <div id="loader">
+        <div id="loader-bar-container">
+            <div id="loader-txt">LOADING</div>
+            <div id="loader-bar"></div>
+        </div>
+    </div>
+
+        <!-- GUI -->
+
+    <div id="gui" ng-app="GUI" ng-controller="GUIController">
+        <nav id="gui-menu">
+            <h1 id="app-logo">CATHEDRAL</h1>
+            <ul class="menu-buttons">
+                <li>
+                    <button type="button" class="btn-save" ng-class="{active: displaySaveModal}" ng-click="showModal('save')">save</button>
+                </li>
+                <li>
+                    <button type="button" class="btn-load" ng-class="{active: displayPresets}" ng-click="showModal('presets')">load</button>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </nav>
+
+        <section id="gui-effects">
+            <div class="gui-section-title">EFFECTS</div>
+            <div class="gui-group" ng-class="{inactive: !effect.active, nomargin: $last}" ng-repeat="(effectKey, effect) in effects">
+                <div class="title">
+                    <span>{{effect.title}}</span>
+                    <input type="checkbox" class="switch" ng-model="effect.active" ng-change="toggleEffect(effectKey, effect.active)">
+                    <div class="clearfix"></div>
+                </div>
+                <div class="controls" ng-show="effect.active">
+                    <div ng-repeat="(paramKey, param) in effect.params">
+                        <label>{{param.title}} <span class="val">{{param.val}}</span></label>
+                        <input
+                        type="{{param.type}}"
+                        min="{{param.min}}"
+                        max="{{param.max}}"
+                        step="{{param.step}}"
+                        ng-model="param.val"
+                        ng-change="updateParam(effectKey, paramKey, param.val)"
+                        />
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gui-save-modal" class="gui-modal" ng-show="displaySaveModal">
+            <form ng-submit="saveSettings()">
+                <div class="title">SAVE</div>
+                <p>CREATE NEW PRESET</p>
+                <input type="text" ng-model="newPresetName">
+                <br/>
+                <button type="submit" class="btn-create">CREATE</button>
+            </form>
+            <button type="button" class="btn-close" ng-click="showModal('close')">X</button>
+        </section>
+
+        <section id="gui-presets" ng-show="displayPresets">
+            <div ng-show="presetsCollection.length == 0" class="no-presets">NO PRESETS</div>
+            <ul>
+                <li ng-repeat="(presetsKey, presets) in presetsCollection">
+                    <button type="button" class="btn-load" ng-class="{active: presetsKey == lastPresetsLoaded, nomargin: $last}" ng-click="loadPresets(presetsKey)">{{presets.name}}</button>
+                    <button type="button" class="btn-delete" ng-click="deletePresets(presetsKey)">X</button>
+                    <div class="clearfix"></div>
+                </li>
+            </ul>
+            <!--<button type="button" class="btn-close" ng-click="showModal('close')">X</button>-->
+        </section>
+    </div>
+
+    <!-- WORLD -->
+
+    <div id="world"></div>
+
+    <!-- LIBS -->
+
+    <script src="js/libs/angular/angular.min.js"></script>
+    <script src="js/libs/three.js/three.min.js"></script>
+
+    <!-- RENDERING -->
+
+    <script src="js/app/rendering/shaders/ConvolutionShader.js"></script>
+    <script src="js/app/rendering/shaders/CopyShader.js"></script>
+    <script src="js/app/rendering/shaders/FXAAShader.js"></script>
+    <script src="js/app/rendering/shaders/VignetteShader.js"></script>
+    <script src="js/app/rendering/shaders/FilmShader.js"></script>
+    <script src="js/app/rendering/shaders/DigitalGlitch.js"></script>
+    <script src="js/app/rendering/shaders/FocusShader.js"></script>
+    <script src="js/app/rendering/shaders/BrightnessContrastShader.js"></script>
+    <script src="js/app/rendering/shaders/PixelateShader.js"></script>
+    <script src="js/app/rendering/shaders/C64Shader.js"></script>
+    <script src="js/app/rendering/shaders/DitherShader.js"></script>
+    <script src="js/app/rendering/shaders/TechnicolorShader.js"></script>
+    <script src="js/app/rendering/shaders/HueSaturationShader.js"></script>
+    <script src="js/app/rendering/shaders/SSAOShader.js"></script>
+    <script src="js/app/rendering/shaders/RGBShiftShader.js"></script>
+    <script src="js/app/rendering/shaders/VerticalTiltShiftShader.js"></script>
+    <script src="js/app/rendering/shaders/HorizontalTiltShiftShader.js"></script>
+    <script src="js/app/rendering/shaders/BleachBypassShader.js"></script>
+    <script src="js/app/rendering/shaders/BokehShader.js"></script>
+
+    <script src="js/app/rendering/postprocessing/FilmPass.js"></script>
+    <script src="js/app/rendering/postprocessing/GlitchPass.js"></script>
+    <script src="js/app/rendering/postprocessing/BloomPass.js"></script>
+    <script src="js/app/rendering/postprocessing/BokehPass.js"></script>
+    <script src="js/app/rendering/postprocessing/MaskPass.js"></script>
+    <script src="js/app/rendering/postprocessing/SavePass.js"></script>
+    <script src="js/app/rendering/postprocessing/RenderPass.js"></script>
+    <script src="js/app/rendering/postprocessing/ShaderPass.js"></script>
+    <script src="js/app/rendering/postprocessing/EffectComposer.js"></script>
+
+    <script src="js/app/rendering/shades.js"></script>
+    <script src="js/app/rendering/fuzzy-shades.js"></script>
+
+    <!-- LOADING -->
+
+    <script src="js/app/loading/OBJLoader.js"></script>
+    <script src="js/app/loading/loader.js"></script>
+
+    <!-- GUI -->
+
+    <script src="js/app/gui/gui.js"></script>
+
+    <!-- CONTROLS -->
+
+    <!--<script src="js/app/three/controls/OrbitControls.js"></script>-->
+    <script src="js/app/controls/xbox360-controls.js"></script>
+
+    <!-- UTILS -->
+
+    <script src="js/app/utils/animator.js"></script>
+
+    <!-- SOUND -->
+
+    <script src="js/app/sound/sound-grabber.js"></script>
+    <script src="js/app/network/midi-grabber.js"></script>
+    <script src="js/app/network/osc-grabber.js"></script>
+
+    <!-- SHADER MATERIALS -->
+
+    <script src="js/app/shader-materials/color-fluids.js"></script>
+    <script src="js/app/shader-materials/noisy-surface.js"></script>
+
+    <!-- 3D OBJECTS -->
+
+    <script src="js/app/3d-objects/skydome.js"></script>
+    <script src="js/app/3d-objects/hair-vessel.js"></script>
+    <script src="js/app/3d-objects/cccc.js"></script>
+    <script src="js/app/3d-objects/hook.js"></script>
+    <script src="js/app/3d-objects/glass-canvas.js"></script>
+    <script src="js/app/3d-objects/rain.js"></script>
+
+    <script src="js/app/3d-objects/clusters/cluster.js"></script>
+    <script src="js/app/3d-objects/clusters/manoyami-cluster.js"></script>
+    <script src="js/app/3d-objects/clusters/spartlex-cluster.js"></script>
+    <script src="js/app/3d-objects/clusters/galma-cluster.js"></script>
+    <script src="js/app/3d-objects/clusters/otomon-cluster.js"></script>
+
+    <!-- APP STRUCTURE -->
+
+    <script src="js/app/world.js"></script>
+    <script src="js/app/textures.js"></script>
+    <script src="js/app/materials.js"></script>
+    <script src="js/app/scene.js"></script>
+
+    <script src="js/app/app.js"></script>
+</body>
+</html>

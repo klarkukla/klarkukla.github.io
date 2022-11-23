@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cours toujours</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<div id="world"></div>
+
+<script id="vertexShader" type="x-shader/x-vertex">
+    uniform vec2 uvScale;
+    varying vec2 vUv;
+
+    void main() {
+        vUv = uv;
+        vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+        gl_Position = projectionMatrix * mvPosition;
+    }
+</script>
+<script id="fragmentShader" type="x-shader/x-fragment">
+    uniform float time;
+    uniform vec2 resolution;
+    varying vec2 vUv;
+
+    void main(void) {
+        vec2 position = vUv / resolution.xy;
+        float red = abs(sin(position.x * position.y + time / 5.0)) + 0.5;
+        float green = abs(sin(position.x * position.y + time / 4.0));
+        float blue = abs(sin(position.x * position.y + time / 3.0));
+        gl_FragColor = vec4(red, green, blue, 1.0);
+    }
+</script>
+
+<script src="three.min.js"></script>
+<script src="dat.gui.min.js"></script>
+
+<script src="../commons/js/utils/animator.js"></script>
+<script src="../commons/js/utils/ResizeScene.js"></script>
+
+<script src="../commons/js/three/shaders/ConvolutionShader.js"></script>
+<script src="../commons/js/three/shaders/CopyShader.js"></script>
+<script src="../commons/js/three/shaders/FXAAShader.js"></script>
+<script src="../commons/js/three/shaders/VignetteShader.js"></script>
+
+<script src="../commons/js/three/shaders/FilmShader.js"></script>
+<script src="../commons/js/three/shaders/FocusShader.js"></script>
+
+<script src="../commons/js/three/postprocessing/FilmPass.js"></script>
+
+<script src="../commons/js/three/postprocessing/EffectComposer.js"></script>
+<script src="../commons/js/three/postprocessing/RenderPass.js"></script>
+<script src="../commons/js/three/postprocessing/BloomPass.js"></script>
+<script src="../commons/js/three/postprocessing/MaskPass.js"></script>
+<script src="../commons/js/three/postprocessing/SavePass.js"></script>
+<script src="../commons/js/three/postprocessing/ShaderPass.js"></script>
+
+<script src="Compositor.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

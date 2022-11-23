@@ -1,0 +1,233 @@
+{
+  "BC" : {
+    "active" : true,
+    "params" : {
+      "brightness" : {
+        "max" : 1,
+        "min" : -1,
+        "step" : 0.01,
+        "title" : "Brightness",
+        "type" : "range",
+        "val" : -0.22808278922359393
+      },
+      "contrast" : {
+        "max" : 1,
+        "min" : -1,
+        "step" : 0.01,
+        "title" : "Contrast",
+        "type" : "range",
+        "val" : 0.03657454018545958
+      }
+    },
+    "title" : "Brightness / Contrast"
+  },
+  "C64" : {
+    "active" : true,
+    "title" : "C64"
+  },
+  "FXAA" : {
+    "active" : true,
+    "title" : "FXAA"
+  },
+  "HS" : {
+    "active" : true,
+    "params" : {
+      "hue" : {
+        "max" : 2,
+        "min" : 0,
+        "step" : 0.1,
+        "title" : "Hue",
+        "type" : "range",
+        "val" : 0.04410955490150892
+      },
+      "saturation" : {
+        "max" : 1.1,
+        "min" : 0,
+        "step" : 0.1,
+        "title" : "Saturation",
+        "type" : "range",
+        "val" : 0
+      }
+    },
+    "title" : "Hue / Saturation"
+  },
+  "HTS" : {
+    "active" : false,
+    "title" : "Horizontal Tilt Shift",
+    "params" : {
+      "r" : {
+        "max" : 3.0,
+        "min" : 0.0,
+        "step" : 0.1,
+        "title" : "Focus",
+        "type" : "range",
+        "val" : 0.0
+      }
+    }
+  },
+  "RGBShift" : {
+    "active" : true,
+    "params" : {
+      "amount" : {
+        "max" : 0.1,
+        "min" : 0,
+        "step" : 0.001,
+        "title" : "Amount",
+        "type" : "range",
+        "val" : 0.002205477745075446
+      },
+      "angle" : {
+        "max" : 7,
+        "min" : 0,
+        "step" : 0.001,
+        "title" : "Angle",
+        "type" : "range",
+        "val" : 4.168352938192593
+      }
+    },
+    "title" : "RGB Shift"
+  },
+  "VTS" : {
+    "active" : false,
+    "title" : "Vertical Tilt Shift",
+    "params" : {
+      "r" : {
+        "max" : 3.0,
+        "min" : 0.0,
+        "step" : 0.1,
+        "title" : "Focus",
+        "type" : "range",
+        "val" : 0.0
+      }
+    }
+  },
+  "bleach" : {
+    "active" : false,
+    "params" : {
+      "opacity" : {
+        "max" : 1,
+        "min" : 0,
+        "step" : 0.1,
+        "title" : "Opacity",
+        "type" : "range",
+        "val" : 0
+      }
+    },
+    "title" : "Bleach"
+  },
+  "bloom" : {
+    "active" : true,
+    "params" : {
+      "opacity" : {
+        "max" : 2,
+        "min" : 0,
+        "step" : 0.01,
+        "title" : "Amount",
+        "type" : "range",
+        "val" : 1.000595592614651
+      }
+    },
+    "title" : "Bloom"
+  },
+  "dither" : {
+    "active" : false,
+    "title" : "Dithering"
+  },
+  "film" : {
+    "active" : true,
+    "params" : {
+      "grayscale" : {
+        "title" : "Grayscale",
+        "type" : "checkbox",
+        "val" : false
+      },
+      "nIntensity" : {
+        "max" : 2,
+        "min" : 0,
+        "step" : 0.01,
+        "title" : "Noise",
+        "type" : "range",
+        "val" : 0.17643821960603567
+      },
+      "sCount" : {
+        "max" : 10,
+        "min" : 0,
+        "step" : 1,
+        "title" : "Scanlines count",
+        "type" : "range",
+        "val" : 0
+      },
+      "sIntensity" : {
+        "max" : 2,
+        "min" : 0,
+        "step" : 0.001,
+        "title" : "Scanlines intensity",
+        "type" : "range",
+        "val" : 0
+      }
+    },
+    "title" : "Film"
+  },
+  "focus" : {
+    "active" : false,
+    "params" : {
+      "sampleDistance" : {
+        "max" : 2,
+        "min" : 0,
+        "step" : 0.01,
+        "title" : "Distance",
+        "type" : "range",
+        "val" : 0.94
+      },
+      "waveFactor" : {
+        "max" : 0.01,
+        "min" : 0,
+        "step" : 1.0,
+        "title" : "Wave",
+        "type" : "range",
+        "val" : 0.00125
+      }
+    },
+    "title" : "Focus"
+  },
+  "pixelate" : {
+    "active" : false,
+    "params" : {
+      "pixelSize" : {
+        "max" : 300,
+        "min" : 1,
+        "step" : 1,
+        "title" : "Size",
+        "type" : "range",
+        "val" : 100
+      }
+    },
+    "title" : "Pixelate"
+  },
+  "technicolor" : {
+    "active" : false,
+    "title" : "Technicolor"
+  },
+  "vignette" : {
+    "active" : true,
+    "title" : "Vignette",
+    "params": {
+      "darkness" : {
+        "max" : 10.0,
+        "min" : 0.0,
+        "step" : 1.0,
+        "title" : "Darkness",
+        "type" : "range",
+        "val" : 0.94
+      },
+      "offset" : {
+        "max" : 10.0,
+        "min" : 0.0,
+        "step" : 1.0,
+        "title" : "Offset",
+        "type" : "range",
+        "val" : 0.00125
+      }
+    }
+  }
+}

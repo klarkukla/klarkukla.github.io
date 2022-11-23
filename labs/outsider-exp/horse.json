@@ -1,0 +1,119 @@
+{"frames": {
+
+"Galop-PP-Cheval-01.png":
+{
+	"frame": {"x":331,"y":297,"w":301,"h":165},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":434,"y":165,"w":301,"h":165},
+	"sourceSize": {"w":900,"h":403}
+},
+"Galop-PP-Cheval-02.png":
+{
+	"frame": {"x":1,"y":872,"w":309,"h":159},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":413,"y":170,"w":309,"h":159},
+	"sourceSize": {"w":900,"h":403}
+},
+"Galop-PP-Cheval-03.png":
+{
+	"frame": {"x":162,"y":872,"w":308,"h":156},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":406,"y":174,"w":308,"h":156},
+	"sourceSize": {"w":900,"h":403}
+},
+"Galop-PP-Cheval-04.png":
+{
+	"frame": {"x":337,"y":1,"w":294,"h":158},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":417,"y":174,"w":294,"h":158},
+	"sourceSize": {"w":900,"h":403}
+},
+"Galop-PP-Cheval-05.png":
+{
+	"frame": {"x":320,"y":891,"w":287,"h":165},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":416,"y":168,"w":287,"h":165},
+	"sourceSize": {"w":900,"h":403}
+},
+"Galop-PP-Cheval-06.png":
+{
+	"frame": {"x":1,"y":1,"w":334,"h":170},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":409,"y":166,"w":334,"h":170},
+	"sourceSize": {"w":900,"h":403}
+},
+"Galop-PP-Cheval-07.png":
+{
+	"frame": {"x":1,"y":173,"w":328,"h":167},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":413,"y":167,"w":328,"h":167},
+	"sourceSize": {"w":900,"h":403}
+},
+"Galop-PP-Cheval-08.png":
+{
+	"frame": {"x":1,"y":1183,"w":282,"h":175},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":413,"y":163,"w":282,"h":175},
+	"sourceSize": {"w":900,"h":403}
+},
+"Galop-PP-Cheval-09.png":
+{
+	"frame": {"x":320,"y":600,"w":289,"h":166},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":415,"y":163,"w":289,"h":166},
+	"sourceSize": {"w":900,"h":403}
+},
+"Galop-PP-Cheval-10.png":
+{
+	"frame": {"x":1,"y":697,"w":299,"h":173},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":415,"y":162,"w":299,"h":173},
+	"sourceSize": {"w":900,"h":403}
+},
+"Galop-PP-Cheval-11.png":
+{
+	"frame": {"x":178,"y":1182,"w":282,"h":174},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":420,"y":158,"w":282,"h":174},
+	"sourceSize": {"w":900,"h":403}
+},
+"Galop-PP-Cheval-12.png":
+{
+	"frame": {"x":1,"y":342,"w":307,"h":179},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":422,"y":157,"w":307,"h":179},
+	"sourceSize": {"w":900,"h":403}
+},
+"Galop-PP-Cheval-13.png":
+{
+	"frame": {"x":1,"y":523,"w":302,"h":172},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":428,"y":161,"w":302,"h":172},
+	"sourceSize": {"w":900,"h":403}
+}},
+"animations": {
+	"horse": ["Galop-PP-Cheval-01.png","Galop-PP-Cheval-02.png","Galop-PP-Cheval-03.png","Galop-PP-Cheval-04.png","Galop-PP-Cheval-05.png","Galop-PP-Cheval-06.png","Galop-PP-Cheval-07.png","Galop-PP-Cheval-08.png","Galop-PP-Cheval-09.png","Galop-PP-Cheval-10.png","Galop-PP-Cheval-11.png","Galop-PP-Cheval-12.png","Galop-PP-Cheval-13.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "horse.png",
+	"format": "RGBA8888",
+	"size": {"w":497,"h":1466},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:611a9e15af47255fd342dfa4ec1376e9:de6d7547e9e0ee90b1db5683b2419445:2b77757e5c6c0b9cbfb3593156511186$"
+}
+}

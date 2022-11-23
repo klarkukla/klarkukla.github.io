@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="" />
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+  <title></title>
+  <style>
+    html, body{
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Slabo 27px', serif;
+      overflow-x: hidden;
+      /*color: #005ADA;*/
+      color: #F20000;
+    }
+    .infos{
+      /*background-color: #E6D02A;*/
+      background-color: #FFCFED;
+      width: calc(30% - 80px);
+      min-height: calc(100% - 80px);
+      float: right;
+      padding: 40px;
+    }
+    #map{
+      width: calc(70%);
+      height: 100%;
+      float: left;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .title{
+      margin: 0;
+      font-size: 69px;
+      font-family: 'Shrikhand', cursive;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="infos">
+    <h1 class="title">Haze</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint provident quaerat adipisci ad voluptas dicta numquam possimus blanditiis perferendis totam omnis, iusto excepturi sit consequuntur impedit labore nihil doloremque esse.</p>
+  </section>
+
+  <section id="map"></section>
+
+  <script>
+      function initMap() {
+
+        var p1 = {lat: 50.636694, lng: 3.038278};
+        var p2 = {lat: 50.637611, lng: 3.038389};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: p2,
+          mapTypeId: 'satellite'
+        });
+
+        var m1 = new google.maps.Marker({
+          position: p1,
+          map: map,
+          icon: 'm1.png',
+          title: 'Pyramid I'
+        });
+
+        var m2 = new google.maps.Marker({
+          position: p2,
+          map: map,
+          icon: 'm2.png',
+          title: 'Pyramid II'
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD8IrKK6ZL7IBMvEqIWBvLF_3bpXB_K44&callback=initMap">
+    </script>
+</body>
+</html>
