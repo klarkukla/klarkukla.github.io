@@ -1,12 +1,17 @@
 html, body{
   font-family: 'Space Mono', monospace;
   color: black;
-  background-color: rgb(243, 243, 243);
+  background-color: #FFF500;
 }
 
-#content{
-  position: relative;
-  z-index: 1;
+.logo{
+  width: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 #three{
@@ -14,36 +19,4 @@ html, body{
   top: 0;
   left: 0;
   z-index: 0;
-}
-a{
-  color: black;
-  font-weight: 700;
-  text-decoration: underline;
-}
-a:hover{
-  color: black;
-}
-
-a.btn{
-  color: rgb(243, 243, 243);;
-  text-decoration: none;
-  padding: 20px;
-  background-color: #4200FF;
-  transition: all 400ms;
-}
-a.btn:hover{
-  background-color: white;
-  color: #4200FF;
-}
-
-.title{
-  font-size: 3rem;
-  padding: 0 40px 0 0;
-  color: black;
-}
-
-@media screen and (min-width: 640px) {
-  body{
-   padding-top: 5%;
-  }
 }

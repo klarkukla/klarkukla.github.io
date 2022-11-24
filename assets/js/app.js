@@ -12,26 +12,26 @@
   renderer.setPixelRatio(window.devicePixelRatio);
   document.getElementById('three').appendChild( renderer.domElement );
 
-  var texture = new THREE.TextureLoader().load( "assets/textures/1.png" );
+  var texture = new THREE.TextureLoader().load( "assets/textures/kkk.png" );
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
   texture.repeat.set( 4, 4 );
 
   var material = new THREE.MeshBasicMaterial( { color: 0xffffff, map: texture, side:THREE.DoubleSide } );
 
-  // geometry = new THREE.CircleGeometry( 20, 32 );
-  // var circle = new THREE.Mesh( geometry, material );
-  // //circle.position.set({x: -0.1, y: -0.1, z: 0});
-  // scene.add( circle );
+  geometry = new THREE.CircleGeometry( 40, 32 );
+  var circle = new THREE.Mesh( geometry, material );
+  //circle.position.set({x: -0.1, y: -0.1, z: 0});
+  scene.add( circle );
 
-  geometry = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
+  /* geometry = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
   var torusKnot = new THREE.Mesh( geometry, material );
-  scene.add( torusKnot );
+  scene.add( torusKnot ); */
 
   var slicesOfTheFuture = new THREE.Group();
-  //slicesOfTheFuture.add( circle );
-  slicesOfTheFuture.add( torusKnot );
-  scene.add(slicesOfTheFuture);
+  slicesOfTheFuture.add( circle );
+  //slicesOfTheFuture.add( torusKnot );
+  //scene.add(slicesOfTheFuture);
 
   // apply random rotation
   slicesOfTheFuture.rotation.set(Math.random()*360, Math.random()*360, Math.random()*360);
